@@ -1,0 +1,49 @@
+{
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "message",
+      "ts": "2026-01-01T10:00:00Z",
+      "content_hash": "d4bc62161bb34bc631a5c08166bf8c4f87c48c52f80b068c804562fc668f2cac",
+      "metadata": {
+        "agent": "demo-agent",
+        "role": "user",
+        "tool_name": null
+      }
+    },
+    {
+      "id": "n2",
+      "type": "tool_call",
+      "ts": "2026-01-01T10:00:01Z",
+      "content_hash": "3cca8417a3fd2e1e72d9e8f988393ff9daa17a85b593e685f093aa49dcd85327",
+      "metadata": {
+        "agent": "demo-agent",
+        "role": null,
+        "tool_name": "web_search"
+      }
+    },
+    {
+      "id": "n3",
+      "type": "message",
+      "ts": "2026-01-01T10:00:03Z",
+      "content_hash": "fa300e6170d4150d58db5f8965f24dba4b2c1ccee217a0333d9f22172fd75bad",
+      "metadata": {
+        "agent": "demo-agent",
+        "role": "assistant",
+        "tool_name": null
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2",
+      "relation": "follows"
+    },
+    {
+      "from": "n2",
+      "to": "n3",
+      "relation": "follows"
+    }
+  ]
+}
