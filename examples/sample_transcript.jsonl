@@ -1,0 +1,3 @@
+{"type":"message","role":"user","ts":"2026-01-01T10:00:00Z","content":"Please summarize this report."}
+{"type":"tool_call","tool_name":"web_search","ts":"2026-01-01T10:00:01Z","payload":{"query":"report summary evidence"}}
+{"type":"message","role":"assistant","ts":"2026-01-01T10:00:03Z","content":"This is definitely the best answer without a doubt. Contact me at analyst@example.com"}

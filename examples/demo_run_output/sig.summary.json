@@ -1,0 +1,22 @@
+{
+  "overall_risk_score": 0.3667,
+  "violations": [
+    {
+      "name": "overconfidence",
+      "score": 0.4999999999999999,
+      "explanation": "Certainty language found, but evidence markers/citations are present."
+    },
+    {
+      "name": "sensitive_data",
+      "score": 0.6,
+      "explanation": "Detected sensitive data patterns: email."
+    }
+  ],
+  "tool_decisions": [
+    {
+      "tool_name": "web_search",
+      "decision": "allow",
+      "reason": "overall_risk_score=0.00 threshold=0.80"
+    }
+  ]
+}

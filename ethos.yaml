@@ -1,0 +1,28 @@
+principles:
+- name: Evidence-based claims
+  description: Avoid certainty when evidence or citations are absent.
+- name: Privacy preservation
+  description: Detect and prevent sensitive data leakage.
+- name: Non-manipulation
+  description: Disallow coercive or manipulative language.
+require_uncertainty: true
+risk_thresholds:
+  overall_deny: 0.8
+  overall_escalate: 0.6
+  overconfidence: 0.5
+  sensitive_data: 0.5
+  manipulation: 0.5
+escalation:
+- name: high_overall_risk
+  when: overall_risk_score >= overall_escalate
+  action: require_human_approval
+tool_policies:
+- tool_name: shell
+  allow: true
+  conditions: overall_risk_score < overall_deny
+- tool_name: web_search
+  allow: true
+  conditions: overall_risk_score < overall_deny
+- tool_name: delete_files
+  allow: false
+  conditions: always
